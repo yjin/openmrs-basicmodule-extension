@@ -1,0 +1,42 @@
+package org.openmrs.module.helloworld.db;
+
+import java.util.List;
+
+import org.openmrs.api.db.DAOException;
+import org.openmrs.module.helloworld.HelloWorldResponse;
+
+/**
+ * HelloWorldResponse-related database functions
+ * 
+ * @author Ben Wolfe
+ * @version 1.0
+ */
+public interface HelloWorldDAO {
+
+	/**
+	 * Creates a new helloWorldResponse record
+	 * 
+	 * @param helloWorldResponse to be created
+	 * @throws DAOException
+	 */
+	public void createHelloWorldResponse(HelloWorldResponse helloWorldResponse) throws DAOException;
+
+	/**
+	 * Get helloWorldResponse by internal identifier
+	 * 
+	 * @param helloWorldResponseId internal helloWorldResponse identifier
+	 * @return helloWorldResponse with given internal identifier
+	 * @throws DAOException
+	 */
+	public HelloWorldResponse getHelloWorldResponse(Integer helloWorldResponseId) throws DAOException;
+
+	/**
+	 * Update helloWorldResponse 
+	 * 
+	 * @param helloWorldResponse to be updated
+	 * @throws DAOException
+	 */
+	public void updateHelloWorldResponse(HelloWorldResponse helloWorldResponse) throws DAOException;
+	
+	public List<HelloWorldResponse> getResponses() throws DAOException;
+}
